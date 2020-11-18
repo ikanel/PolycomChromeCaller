@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Polycom caller extension Options</title>
+</head>
+
+<body>
+
+    <h3>Available lines:</h3>
+    <p>Specify the number of lines available in your Polycom phone</p>
+    <input type="number" max="10" min="1" id="lines" />
+
+
+
+    <h3>Phone Address</h3>
+    <p>Specify the phone address including protocol and without trailing slash. Example: http://192.168.0.100</p>
+    <input type="text" id="host">
+
+
+    <h3>Phone push User</h3>
+    <p>Specify the username for the Polycom push service. To define the username login into the Polycom Web Configuration Utility. Just type the phone IP address in your browser. 
+        The default admin password for the utility is 456. Go to the settings/applications/push, enable all push messages, specify username and password. </p>
+    <input type="text" id="pushUser">
+    <h3>Phone push Password </h3>
+    <p>Specify the push service password</p>
+    <input type="password" id="pushPassword">
+
+
+    <h3>Phone number rewriting</h3>
+    <p>It is possible to prepend the phone number with the country code if it is was not defined. If you want to use this feature - specify the phone line to prepend, 
+        country code and check an appropriate checkbox. </p>
+    <input type="checkbox" id="addcountrycode" />
+    Add a countrycode for numbers
+    <input type="text" id="countrycode"> for line <input type="number" max="10" min="1" id="countrycodeLine" />
+
+
+    <div id="status"></div>
+    <button id="save">Save</button>
+    <script src="common.js"></script>
+    <script src="rightclick.js"></script>
+    <script src="options.js"></script>
+</body>
+
+</html>
