@@ -12,7 +12,7 @@ function call(phone, line = "Line1") {
     }, function (errorCode) {
         // error callback
         // tell user request failed
-        alert(errorCode);
+        if(errorCode>0) alert(errorCode);
     }, postData);
 }
 
